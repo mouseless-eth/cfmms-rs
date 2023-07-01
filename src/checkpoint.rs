@@ -600,10 +600,7 @@ pub fn construct_checkpoint(
                     String::from("UniswapV2").into(),
                 );
 
-                dex_map.insert(
-                    String::from("fee"),
-                    format!("{:?}", uniswap_v2_dex.fee).into(),
-                );
+                dex_map.insert(String::from("fee"), uniswap_v2_dex.fee.into());
             }
 
             Dex::UniswapV3(_) => {
